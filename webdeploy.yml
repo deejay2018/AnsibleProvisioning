@@ -1,13 +1,11 @@
- ---
-    - name: systems provisionng
+---
+- name: systems provisionng
   hosts: web
-
   become: yes 
   become_method: sudo
   remote_user: ec2-user
-
   tasks: 
-    - name: install apps needed
-      copy:
-        src: index.html
-        dest: /var/www/html 
+  - name: install apps needed
+    copy:
+      src: index.html
+      dest: /var/www/html
